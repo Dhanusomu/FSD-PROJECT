@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="seat" placeholder="Enter seat Number">
+    <input type="number" id="class" placeholder="Enter class">
+    <button onclick="getpos()">Get Position</button>
+    <h2 id="res"></h2>
+</body>
+<script>
+    let n = document.getElementById("seat").value;
+    let c = document.getElementById("class").value;
+    
+
+    function getpos()
+    {
+        let r = n%8;
+        if(c === 3)
+    {
+        if(n<=0 || n>80)
+        {
+            document.getElementById("res").textContent="Invalid seat number";
+        }
+        if(r===1||r===4)
+        {
+            document.getElementById("res").textContent="Lower";
+        }
+        else if(r===2 || r===5)
+        {
+            document.getElementById("res").textContent="Middle";
+        }
+        else if(r===3 || r=== 6)
+        {
+            document.getElementById("res").textContent="Upper";
+        }
+        else if(r===7)
+        {
+            document.getElementById("res").textContent="Side Lower";
+        }
+        else
+        {
+            document.getElementById("res").textContent="Side Upper";
+
+        }
+    }
+    else if(c===2)
+    {
+        let r1 = n%6;
+        if(n<=0 || n>60)
+        {
+            document.getElementById("res").textContent="Invalid seat number";
+        }
+        if(r1===1||r1===3)
+        {
+            document.getElementById("res").textContent="Lower";
+
+        }
+        else if(r1===2||r1==4)
+        {
+            document.getElementById("res").textContent="Upper";
+        }
+        else if(r1===5)
+        {
+            document.getElementById("res").textContent="Side Lower";           
+        }
+        else{
+            document.getElementById("res").textContent="Side Upper";
+        }
+    }
+   else{
+            document.getElementById("res").textContent="Invalid Class";
+    }
+
+    }
+</script>
+</html>

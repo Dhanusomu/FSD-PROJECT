@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HERO</title>
+</head>
+<style>
+    body {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    }
+</style>
+<body bgcolor="#faebd7">
+<center>
+    <h1>⚔️Hero and their power🦸</h1>
+    <input type="text" placeholder="Enter Hero name" id="heroname">
+    <button onclick="heroName()">Submit</button>
+    <h1 id="power"></h1>
+</center>
+</body>
+<script>
+    async function heroName() {
+        const response = document.getElementById('heroname').value;
+        const text = await response.text;
+        document.getElementById('heroname').innerHTML = text();
+    }
+</script>
+</html>

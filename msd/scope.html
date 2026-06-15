@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variable scope</h1>
+</body>
+<script>
+    // var
+    // can redeclare and can reassign the var variable
+    var a = 2;
+    console.log(a); 
+    var a = 3;
+    console.log(a); 
+    a = 4;
+    console.log(a);
+
+    //let
+    //cannot redeclare the let variable
+    let b = 20;
+    console.log(b);
+    // let b = 30;
+    // console.log(b);
+    b = 40;
+    console.log(b);
+
+    // //const
+    // //cannot redeclare and cannot reassign the const variable
+    const c = 200;
+    console.log(c);
+    // const c = 300;
+    // console.log(c);
+    c = 400;
+    console.log(c);
+
+    if(true){
+        var d = 5;
+        let e = 6;
+        const f = 7;
+    }
+    console.log(d);
+    //if this is uncommented, it will throw an error
+    //console.log(e);
+    //if this is uncommented, it will throw an error
+    //console.log(f);
+</script>
+</html>
